@@ -1,0 +1,15 @@
+li{
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    position: relative;
+    left: 200px;
+}
+.video-container iframe {
+    position: absolute;
+    width: 70%;
+    height: 50%;
+}
