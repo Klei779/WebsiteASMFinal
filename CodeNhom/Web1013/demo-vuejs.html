@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form đăng nhập Vue.js với Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        .login-form {
+            width: 300px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <login-form></login-form>
+    </div>
+
+    <template id="login-form-template">
+        <div class="login-form">
+            <h2 class="text-center">Đăng nhập</h2>
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" v-model="username" class="form-control" placeholder="Nhập tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" v-model="password" class="form-control" placeholder="Nhập mật khẩu">
+            </div>
+            <button @click="login" class="btn btn-primary btn-block">Đăng nhập</button>
+            <p v-if="error" class="text-danger mt-2 text-center">{{ error }}</p>
+        </div>
+    </template>
+
+    <script>
+        Vue.component('login-form', {
+            template: '#login-form-template',
+            data() {
+                return {
+                    username: '',
+                    password: '',
+                    error: ''
+                };
+            },
+            methods: {
+                login() {
+                    // Xử lý đăng nhập ở đây
+                    if (this.username === 'admin' && this.password === 'password') {
+                        alert('Đăng nhập thành công!');
+                        this.error = '';
+                    } else {
+                        this.error = 'Tên đăng nhập hoặc mật khẩu không đúng.';
+                    }
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>

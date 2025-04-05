@@ -1,0 +1,70 @@
+.news-container {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+}
+
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa các mục */
+}
+
+.news-item {
+    width: calc(33.33% - 20px); /* Chia đều 3 cột */
+    text-align: left;
+}
+
+.news-item img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: black;
+    max-width: 100%;
+}
+h1{
+    font-family: sans-serif;
+    color: rgb(3,83,143);
+    text-align: center;
+}
+h1 :hover{
+    color: blueviolet !important;
+}
+h2{
+    color: white;
+    background-color: rgb(3,83,143);
+    width: 90%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;  
+    text-align: center; 
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 20px; 
+}
+h1{
+    color: white;
+    background-color: rgb(3,83,143);
+    width: 96%;
+
+    font-family: sans-serif;
+    font-weight: bold;  
+    text-align: center; 
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 20px; 
+}
+p{
+    font-family: sans-serif;
+    color: gray;
+    padding-left: 20px;
+   
+}
+li{
+    font-weight: bold;
+    font-family: sans-serif;
+}
